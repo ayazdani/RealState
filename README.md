@@ -6,26 +6,30 @@ A modern real estate listing website built with PHP and MySQL, focusing on prope
 This project is part of a larger real estate listing service, with the current implementation focusing on the homepage, search interface, and foundational features.
 
 ## Project Structure
-  RealState/
-├── assets/
-│ ├── css/
+
+RealState/
+├── assets/ # Static assets directory
+│ ├── css/ # Stylesheet files
 │ │ ├── main.css # Core styles
-│ │ ├── home.css # Homepage styles
-│ │ ├── variables.css # CSS variables
-│ │ └── responsive.css # Mobile styles
-│ ├── js/
-│ │ └── main.js # Core JavaScript
+│ │ ├── home.css # Homepage specific styles
+│ │ ├── variables.css # CSS variables & theming
+│ │ └── responsive.css # Mobile & responsive styles
+│ ├── js/ # JavaScript files
+│ │ └── main.js # Core JavaScript functionality
 │ └── images/ # Image assets
-├── includes/
+│
+├── includes/ # PHP components
 │ ├── config.php # Database configuration
-│ ├── database.php # Database connection
+│ ├── database.php # Database connection handler
 │ ├── functions.php # Helper functions
-│ ├── header.php # Site header
-│ └── footer.php # Site footer
-├── seo/
+│ ├── header.php # Site header component
+│ └── footer.php # Site footer component
+│
+├── seo/ # SEO related files
 │ ├── robots.txt # Search engine rules
-│ └── sitemap.xml # Site structure
-├── index.php # Homepage
+│ └── sitemap.xml # Site structure for SEO
+│
+├── index.php # Homepage file
 └── real_estate.sql # Database structure & sample data
 
 ## Current Features
