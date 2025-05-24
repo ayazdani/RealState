@@ -8,29 +8,26 @@ This project is part of a larger real estate listing service, with the current i
 ## Project Structure
 
 RealState/
-├── assets/ # Static assets directory
-│ ├── css/ # Stylesheet files
-│ │ ├── main.css # Core styles
-│ │ ├── home.css # Homepage specific styles
-│ │ ├── variables.css # CSS variables & theming
-│ │ └── responsive.css # Mobile & responsive styles
-│ ├── js/ # JavaScript files
-│ │ └── main.js # Core JavaScript functionality
-│ └── images/ # Image assets
-│
-├── includes/ # PHP components
-│ ├── config.php # Database configuration
-│ ├── database.php # Database connection handler
-│ ├── functions.php # Helper functions
-│ ├── header.php # Site header component
-│ └── footer.php # Site footer component
-│
-├── seo/ # SEO related files
-│ ├── robots.txt # Search engine rules
-│ └── sitemap.xml # Site structure for SEO
-│
-├── index.php # Homepage file
-└── real_estate.sql # Database structure & sample data
+├── assets/
+|   ├── css/
+|   |   ├── main.css          # Core styles
+|   |   ├── home.css          # Homepage styles
+|   |   ├── variables.css     # CSS variables
+|   |   └── responsive.css    # Mobile styles
+|   ├── js/
+|   |   └── main.js          # Core JavaScript
+|   └── images/              # Image assets
+├── includes/
+|   ├── config.php          # Database configuration
+|   ├── database.php        # Database connection
+|   ├── functions.php       # Helper functions
+|   ├── header.php          # Site header
+|   └── footer.php          # Site footer
+├── seo/
+|   ├── robots.txt          # Search engine rules
+|   └── sitemap.xml         # Site structure
+├── index.php              # Homepage
+└── real_estate.sql        # Database structure & data
 
 ## Current Features
 ✅ Implemented:
