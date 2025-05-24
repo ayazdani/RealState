@@ -1,14 +1,60 @@
-
 .hero {
-    background: linear-gradient(135deg, #2C7873, #52B788);
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    position: relative;
+    overflow: hidden;
     min-height: 400px;
     padding: 4rem 0;
     display: flex;
     align-items: center;
     text-align: center;
+    margin-top: -70px;
+    padding-top: calc(4rem + 70px);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.2) 10%,
+        rgba(255,255,255,0.1) 20%,
+        transparent 60%
+    );
+    animation: rotate 15s linear infinite;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(
+        circle,
+        rgba(255,255,255,0.15) 10%,
+        rgba(255,255,255,0.05) 20%,
+        transparent 60%
+    );
+    animation: rotate 12s linear infinite reverse;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .hero-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
     padding: 0 1rem;
@@ -19,31 +65,38 @@
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
 .search-container {
-    background: #fff;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
 }
 
 .search-tabs {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .tab {
     background: transparent;
     border: none;
     color: rgba(255, 255, 255, 0.7);
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.8rem 0;
+    font-size: 1.1rem;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+.tab:hover {
+    color: #fff;
 }
 
 .tab.active {
@@ -54,24 +107,20 @@
 .tab::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: 0;
     left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #fff;
-    transition: width 0.3s ease;
-}
-
-.tab.active::after {
     width: 100%;
-}
-
-.tab:hover {
-    color: #fff;
+    height: 2px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .tab:hover::after {
-    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tab.active::after {
+    background-color: #fff;
 }
 
 .search-input-group {

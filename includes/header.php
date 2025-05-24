@@ -20,6 +20,7 @@
         </nav>
     </div>
 </header>
+<div class="mobile-menu-overlay"></div>
 
 <meta name="description" content="...">
 <meta name="keywords" content="...">

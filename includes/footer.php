@@ -17,7 +17,7 @@
                 <ul>
                     <li><a href="/properties?type=house">Houses</a></li>
                     <li><a href="/properties?type=apartment">Apartments</a></li>
-                    <li><a href="/properties?type=villa">Villas</a></li>
+                    <li><a href="/properties?type=villa">Townhouses</a></li>
                 </ul>
             </div>
             

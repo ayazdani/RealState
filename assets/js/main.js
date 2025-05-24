@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.nav-menu a');
     const tabs = document.querySelectorAll('.tab');
     const navLinks = document.querySelectorAll('.nav-link');
+    const overlay = document.querySelector('.mobile-menu-overlay');
+    const body = document.body;
 
     function updateActiveStates(targetTab) {
         tabs.forEach(tab => {
@@ -27,30 +29,76 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
-            
-            menuItems.forEach((item, index) => {
-                if (navMenu.classList.contains('active')) {
-                    item.style.transitionDelay = `${index * 0.1}s`;
-                } else {
-                    item.style.transitionDelay = '0s';
-                }
-            });
-        });
-
-        document.addEventListener('click', function(e) {
-            if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target) && navMenu.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-                menuItems.forEach(item => {
-                    item.style.transitionDelay = '0s';
-                });
+    // Function to open menu
+    function openMenu() {
+        navMenu.classList.add('active');
+        overlay.classList.add('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'true');
+        body.classList.add('menu-open');
+        
+        menuItems.forEach((item, index) => {
+            if (navMenu.classList.contains('active')) {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            } else {
+                item.style.transitionDelay = '0s';
             }
         });
     }
+
+    // Function to close menu
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        overlay.classList.remove('active');
+        mobileMenuToggle.setAttribute('aria-expanded', 'false');
+        body.classList.remove('menu-open');
+        
+        menuItems.forEach(item => {
+            item.style.transitionDelay = '0s';
+        });
+    }
+
+    // Toggle menu on hamburger click
+    mobileMenuToggle.addEventListener('click', function() {
+        if (navMenu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    // Close menu when clicking a link
+    menuItems.forEach(item => {
+        item.addEventListener('click', function() {
+            closeMenu();
+        });
+    });
+
+    // Close menu when clicking overlay
+    overlay.addEventListener('click', closeMenu);
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+            closeMenu();
+        }
+    });
+
+    // Handle tab key for accessibility
+    navMenu.addEventListener('keydown', function(e) {
+        if (e.key === 'Tab') {
+            const focusableElements = navMenu.querySelectorAll('a, button');
+            const firstElement = focusableElements[0];
+            const lastElement = focusableElements[focusableElements.length - 1];
+
+            if (e.shiftKey && document.activeElement === firstElement) {
+                e.preventDefault();
+                lastElement.focus();
+            } else if (!e.shiftKey && document.activeElement === lastElement) {
+                e.preventDefault();
+                firstElement.focus();
+            }
+        }
+    });
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
