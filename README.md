@@ -1,33 +1,45 @@
 # Real Estate Website Project
 
-A modern real estate listing website built with PHP and MySQL, focusing on property search, category browsing, and SEO optimization.
+A modern real estate website built with PHP and MySQL, featuring property listings, search functionality, and category browsing.
 
-## Project Overview
-This project is part of a larger real estate listing service, with the current implementation focusing on the homepage, search interface, and foundational features.
+## Quick Start Guide
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone [your-repository-url]
+   cd RealState
+   ```
+
+2. **Database Setup**
+   ```bash
+   mysql -u your_username -p real_estate < real_estate.sql
+   ```
+
+3. **Configure Database**
+   Edit `includes/config.php`:
+   ```php
+   define('DB_HOST', 'localhost');
+   define('DB_USER', 'your_username');
+   define('DB_PASS', 'your_password');
+   define('DB_NAME', 'real_estate');
+   ```
+
+4. **Start Development Server**
+   ```bash
+   php -S localhost:8000
+   ```
+
+5. **Access the Website**
+   - Open: `http://localhost:8000`
+
+For detailed setup and development guidelines, see [GUIDELINES.md](GUIDELINES.md)
 
 ## Project Structure
 
-RealState/
-├── assets/
-|   ├── css/
-|   |   ├── main.css          # Core styles
-|   |   ├── home.css          # Homepage styles
-|   |   ├── variables.css     # CSS variables
-|   |   └── responsive.css    # Mobile styles
-|   ├── js/
-|   |   └── main.js          # Core JavaScript
-|   └── images/              # Image assets
-├── includes/
-|   ├── config.php          # Database configuration
-|   ├── database.php        # Database connection
-|   ├── functions.php       # Helper functions
-|   ├── header.php          # Site header
-|   └── footer.php          # Site footer
-├── seo/
-|   ├── robots.txt          # Search engine rules
-|   └── sitemap.xml         # Site structure
-├── index.php              # Homepage
-└── real_estate.sql        # Database structure & data
+## Project Overview
+This project is part of a larger real estate listing service, with the current implementation focusing on the homepage, search interface, and foundational features.
 
 ## Current Features
 ✅ Implemented:
@@ -38,18 +50,6 @@ RealState/
 - SEO optimization
 - Database structure for properties and categories
 
-## Setup Requirements
-- PHP 7.4+
-- MySQL 5.7+
-- Apache/XAMPP
-- Web browser with JavaScript enabled
-
-## Quick Start
-1. Clone repository to XAMPP's htdocs
-2. Create database 'real_estate' in phpMyAdmin
-3. Import real_estate.sql
-4. Configure includes/config.php with database credentials
-5. Access via localhost/RealState
 
 ## Next Steps
 See GUIDELINES.md for:
@@ -64,6 +64,40 @@ See GUIDELINES.md for:
 - HTML5/CSS3 (Frontend)
 - JavaScript (Interactivity)
 - Apache (Server)
+
+## Development Guidelines
+
+1. **CSS Changes**
+   - Core styles are in `assets/css/main.css`
+   - Homepage specific styles in `assets/css/home.css`
+   - Global variables in `assets/css/variables.css`
+   - Responsive designs in `assets/css/responsive.css`
+
+2. **PHP Components**
+   - All database queries should go through `includes/database.php`
+   - Common functions are in `includes/functions.php`
+   - Reusable header/footer in respective files
+
+3. **SEO**
+   - Update `seo/robots.txt` for search engine crawling rules
+   - Maintain `seo/sitemap.xml` when adding new pages
+
+## Contributing
+1. Create a new branch for your feature
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+2. Make your changes
+3. Commit with clear messages
+4. Push and create a pull request
+
+## Troubleshooting
+- If you encounter database connection issues, verify your credentials in `config.php`
+- For permission issues, ensure proper file permissions (usually 755 for directories, 644 for files)
+- Check PHP error logs if the site isn't loading properly
+
+## Contact
+[Add your contact information or team lead's contact]
 
 ## Database Setup Instructions
 
@@ -133,5 +167,63 @@ The imported database includes:
 1. Create a new database named `real_estate` in phpMyAdmin
 2. Import the `real_estate.sql` file from the project root
 3. Update database credentials in `includes/config.php` if needed
+
+## Getting Started
+
+### Prerequisites
+- PHP 7.4+
+- MySQL 5.7+
+- Web server (Apache/Nginx)
+- Git installed on your computer
+
+### Installation
+
+1. **Get Repository Access**
+   - Get the repository URL from your team lead
+   - The URL will look like: 
+     - HTTPS: `https://github.com/username/RealState.git`
+     - or SSH: `git@github.com:username/RealState.git`
+
+2. **Clone the Repository**
+   ```bash
+   # Using HTTPS
+   git clone https://github.com/username/RealState.git
+   # OR using SSH
+   git clone git@github.com:username/RealState.git
+
+   # Enter the project directory
+   cd RealState
+   ```
+
+3. **Database Setup**
+   - Create a new MySQL database named `real_estate`
+   - Import the database structure:
+   ```bash
+   mysql -u your_username -p real_estate < real_estate.sql
+   ```
+
+4. **Configure Database Connection**
+   - Open `includes/config.php`
+   - Update these settings with your database information:
+   ```php
+   define('DB_HOST', 'localhost');
+   define('DB_USER', 'your_username');
+   define('DB_PASS', 'your_password');
+   define('DB_NAME', 'real_estate');
+   ```
+
+5. **Start Local Server**
+   ```bash
+   php -S localhost:8000
+   ```
+
+6. **Access the Website**
+   - Open your browser
+   - Go to: `http://localhost:8000`
+
+### Troubleshooting
+- If you can't clone: Make sure you have access to the repository
+- If database import fails: Check if database `real_estate` exists
+- If connection fails: Verify your database credentials in `config.php`
 
 

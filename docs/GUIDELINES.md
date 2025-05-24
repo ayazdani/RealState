@@ -1,5 +1,161 @@
 # Development Guidelines
 
+## Development Environment Setup
+
+### Web Server Configuration
+1. **Apache Settings**
+   - Enable mod_rewrite
+   - Configure virtual host (if needed)
+   ```apache
+   <VirtualHost *:80>
+       DocumentRoot "/path/to/RealState"
+       ServerName realstate.local
+   </VirtualHost>
+   ```
+
+2. **File Permissions**
+   - Directories: 755 (`chmod 755 directory_name`)
+   - Files: 644 (`chmod 644 file_name`)
+
+## Coding Standards
+
+### PHP Guidelines
+1. **Database Operations**
+   - Use prepared statements for queries
+   - Always validate user input
+   - Handle database errors appropriately
+   ```php
+   // Example of proper database query
+   $stmt = $conn->prepare("SELECT * FROM properties WHERE id = ?");
+   $stmt->bind_param("i", $id);
+   ```
+
+2. **Function Structure**
+   - Use meaningful function names
+   - Document parameters and return types
+   - Keep functions focused and single-purpose
+
+### CSS Organization
+1. **File Purpose**
+   - `main.css`: Global styles, typography, utilities
+   - `home.css`: Homepage-specific styles
+   - `variables.css`: Color schemes, breakpoints, spacing
+   - `responsive.css`: Mobile-first media queries
+
+2. **Naming Conventions**
+   - Use BEM methodology
+   - Prefix utility classes with `u-`
+   - Component-specific classes with component name
+
+### JavaScript Best Practices
+1. **Code Organization**
+   - Use ES6+ features
+   - Modular code structure
+   - Comment complex logic
+
+## Simple Git Workflow
+
+### Basic Process
+1. **Get Latest Code**
+   ```bash
+   git checkout master
+   git pull origin master
+   ```
+
+2. **Create Your Feature Branch**
+   ```bash
+   git checkout -b feature-name
+   # Example: git checkout -b add-search-filter
+   ```
+
+3. **Work on Your Feature**
+   - Make your changes
+   - Test your feature locally
+   - Commit your changes:
+   ```bash
+   git add .
+   git commit -m "Added [feature-name]"
+   ```
+
+4. **Merge to Master**
+   ```bash
+   git checkout master
+   git pull origin master        # Get any updates
+   git merge feature-name        # Merge your feature
+   git push origin master        # Push to repository
+   ```
+
+### Good Practices
+- Pull the latest master before starting new work
+- Use clear branch names that describe your feature
+- Test your changes before merging to master
+- Let team members know when you've pushed major changes
+
+### Branch Naming Examples
+- `search-feature`
+- `fix-mobile-menu`
+- `add-property-page`
+
+## Testing
+1. **Before Committing**
+   - Test on multiple browsers
+   - Verify mobile responsiveness
+   - Check console for errors
+   - Validate database operations
+
+## Deployment
+1. **Pre-deployment Checklist**
+   - Update configuration files
+   - Optimize images
+   - Minify CSS/JS
+   - Update sitemap.xml
+
+2. **Database Management**
+   - Regular backups
+   - Version control for schema changes
+   - Document migrations
+
+## SEO Guidelines
+1. **Meta Tags**
+   - Unique title per page
+   - Descriptive meta descriptions
+   - Proper heading hierarchy
+
+2. **Content Guidelines**
+   - Optimize image alt texts
+   - Use semantic HTML
+   - Maintain proper URL structure
+
+## Troubleshooting Guide
+
+### Common Issues
+1. **Database Connection**
+   - Verify credentials in config.php
+   - Check MySQL service status
+   - Confirm database exists
+
+2. **Display Issues**
+   - Clear browser cache
+   - Check CSS specificity
+   - Verify media query breakpoints
+
+3. **Performance**
+   - Enable PHP caching
+   - Optimize database queries
+   - Compress static assets
+
+## Security Measures
+1. **Input Validation**
+2. **XSS Prevention**
+3. **CSRF Protection**
+4. **Secure File Uploads**
+
+## Maintenance
+- Regular dependency updates
+- Database optimization
+- Log monitoring
+- Backup procedures
+
 ## Implementation Sections
 
 ### 1. Homepage & SEO (✅ Completed)
