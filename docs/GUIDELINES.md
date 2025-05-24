@@ -1,22 +1,5 @@
 # Development Guidelines
 
-## Development Environment Setup
-
-### Web Server Configuration
-1. **Apache Settings**
-   - Enable mod_rewrite
-   - Configure virtual host (if needed)
-   ```apache
-   <VirtualHost *:80>
-       DocumentRoot "/path/to/RealState"
-       ServerName realstate.local
-   </VirtualHost>
-   ```
-
-2. **File Permissions**
-   - Directories: 755 (`chmod 755 directory_name`)
-   - Files: 644 (`chmod 644 file_name`)
-
 ## Coding Standards
 
 ### PHP Guidelines
@@ -100,20 +83,7 @@
 1. **Before Committing**
    - Test on multiple browsers
    - Verify mobile responsiveness
-   - Check console for errors
    - Validate database operations
-
-## Deployment
-1. **Pre-deployment Checklist**
-   - Update configuration files
-   - Optimize images
-   - Minify CSS/JS
-   - Update sitemap.xml
-
-2. **Database Management**
-   - Regular backups
-   - Version control for schema changes
-   - Document migrations
 
 ## SEO Guidelines
 1. **Meta Tags**
@@ -139,22 +109,6 @@
    - Check CSS specificity
    - Verify media query breakpoints
 
-3. **Performance**
-   - Enable PHP caching
-   - Optimize database queries
-   - Compress static assets
-
-## Security Measures
-1. **Input Validation**
-2. **XSS Prevention**
-3. **CSRF Protection**
-4. **Secure File Uploads**
-
-## Maintenance
-- Regular dependency updates
-- Database optimization
-- Log monitoring
-- Backup procedures
 
 ## Implementation Sections
 
@@ -260,19 +214,8 @@ CREATE TABLE categories (
 
 ## Development Standards
 
-### 1. PHP Practices
-- Use prepared statements for all queries
-- Follow existing function patterns in functions.php
-- Document new functions
-- Validate user input
 
-### 2. Frontend Development
-- Mobile-first approach
-- Follow BEM naming convention
-- Use existing CSS variables
-- Maintain accessibility standards
-
-### 3. Database Operations
+### 1. Database Operations
 ```php
 // Example function pattern
 function get_properties_by_category($category_id) {
@@ -284,7 +227,7 @@ function get_properties_by_category($category_id) {
 }
 ```
 
-### 4. SEO Considerations
+### 2. SEO Considerations
 - Use semantic HTML
 - Include meta descriptions
 - Optimize images
@@ -327,15 +270,3 @@ function get_properties_by_category($category_id) {
 - Mobile responsive design
 - SEO optimization
 
-## Next Steps
-See GUIDELINES.md for:
-- Property listing implementation
-- Search and filter system
-- New homes section
-- Category management
-
-## Tech Stack
-- PHP
-- MySQL
-- HTML/CSS
-- JavaScript
