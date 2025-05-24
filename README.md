@@ -7,27 +7,32 @@ This project is part of a larger real estate listing service, with the current i
 
 ## Project Structure
 
-RealState/
-├── assets/
-|   ├── css/
-|   |   ├── main.css          # Core styles
-|   |   ├── home.css          # Homepage styles
-|   |   ├── variables.css     # CSS variables
-|   |   └── responsive.css    # Mobile styles
-|   ├── js/
-|   |   └── main.js          # Core JavaScript
-|   └── images/              # Image assets
-├── includes/
-|   ├── config.php          # Database configuration
-|   ├── database.php        # Database connection
-|   ├── functions.php       # Helper functions
-|   ├── header.php          # Site header
-|   └── footer.php          # Site footer
-├── seo/
-|   ├── robots.txt          # Search engine rules
-|   └── sitemap.xml         # Site structure
-├── index.php              # Homepage
-└── real_estate.sql        # Database structure & data
+│
+├── assets
+│   ├── css
+│   │   ├── main.css         # Core styles
+│   │   ├── home.css         # Homepage styles
+│   │   ├── variables.css    # CSS variables
+│   │   └── responsive.css   # Mobile styles
+│   │
+│   ├── js
+│   │   └── main.js         # Core JavaScript
+│   │
+│   └── images              # Image assets
+│
+├── includes
+│   ├── config.php          # Database configuration
+│   ├── database.php        # Database connection
+│   ├── functions.php       # Helper functions
+│   ├── header.php          # Site header
+│   └── footer.php          # Site footer
+│
+├── seo
+│   ├── robots.txt          # Search engine rules
+│   └── sitemap.xml         # Site structure
+│
+├── index.php               # Homepage
+└── real_estate.sql         # Database structure & data
 
 ## Current Features
 ✅ Implemented:
