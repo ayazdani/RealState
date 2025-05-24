@@ -1,4 +1,70 @@
-# Database Setup Instructions
+# Real Estate Website Project
+
+A modern real estate listing website built with PHP and MySQL, focusing on property search, category browsing, and SEO optimization.
+
+## Project Overview
+This project is part of a larger real estate listing service, with the current implementation focusing on the homepage, search interface, and foundational features.
+
+## Project Structure
+  RealState/
+├── assets/
+│ ├── css/
+│ │ ├── main.css # Core styles
+│ │ ├── home.css # Homepage styles
+│ │ ├── variables.css # CSS variables
+│ │ └── responsive.css # Mobile styles
+│ ├── js/
+│ │ └── main.js # Core JavaScript
+│ └── images/ # Image assets
+├── includes/
+│ ├── config.php # Database configuration
+│ ├── database.php # Database connection
+│ ├── functions.php # Helper functions
+│ ├── header.php # Site header
+│ └── footer.php # Site footer
+├── seo/
+│ ├── robots.txt # Search engine rules
+│ └── sitemap.xml # Site structure
+├── index.php # Homepage
+└── real_estate.sql # Database structure & sample data
+
+## Current Features
+✅ Implemented:
+- Responsive homepage with search interface
+- Featured properties section
+- Category browsing (display only)
+- Mobile-first design
+- SEO optimization
+- Database structure for properties and categories
+
+## Setup Requirements
+- PHP 7.4+
+- MySQL 5.7+
+- Apache/XAMPP
+- Web browser with JavaScript enabled
+
+## Quick Start
+1. Clone repository to XAMPP's htdocs
+2. Create database 'real_estate' in phpMyAdmin
+3. Import real_estate.sql
+4. Configure includes/config.php with database credentials
+5. Access via localhost/RealState
+
+## Next Steps
+See GUIDELINES.md for:
+- Detailed development guidelines
+- Feature implementation guides
+- Code standards
+- Integration points
+
+## Tech Stack
+- PHP (Backend)
+- MySQL (Database)
+- HTML5/CSS3 (Frontend)
+- JavaScript (Interactivity)
+- Apache (Server)
+
+## Database Setup Instructions
 
 ## Prerequisites
 - XAMPP installed
