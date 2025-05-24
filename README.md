@@ -5,11 +5,6 @@ A modern real estate listing website built with PHP and MySQL, focusing on prope
 ## Project Overview
 This project is part of a larger real estate listing service, with the current implementation focusing on the homepage, search interface, and foundational features.
 
-## Project Structure
-
-![Uploading image.png…]()
-
-
 ## Current Features
 ✅ Implemented:
 - Responsive homepage with search interface
