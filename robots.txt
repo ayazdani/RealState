@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /includes/
+Disallow: /assets/css/
+Disallow: /assets/js/
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Crawl-delay
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: <?php echo SITE_URL; ?>/sitemap.xml 
