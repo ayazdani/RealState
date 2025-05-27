@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Function to open menu
     function openMenu() {
         navMenu.classList.add('active');
         overlay.classList.add('active');
@@ -45,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Function to close menu
     function closeMenu() {
         navMenu.classList.remove('active');
         overlay.classList.remove('active');
@@ -57,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Toggle menu on hamburger click
     mobileMenuToggle.addEventListener('click', function() {
         if (navMenu.classList.contains('active')) {
             closeMenu();
@@ -66,24 +63,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close menu when clicking a link
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
             closeMenu();
         });
     });
 
-    // Close menu when clicking overlay
     overlay.addEventListener('click', closeMenu);
 
-    // Close menu on escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && navMenu.classList.contains('active')) {
             closeMenu();
         }
     });
 
-    // Handle tab key for accessibility
     navMenu.addEventListener('keydown', function(e) {
         if (e.key === 'Tab') {
             const focusableElements = navMenu.querySelectorAll('a, button');

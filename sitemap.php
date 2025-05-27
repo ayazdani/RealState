@@ -8,14 +8,12 @@ require_once 'includes/functions.php';
 echo '<?xml version="1.0" encoding="UTF-8"?>';
 ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Homepage -->
     <url>
         <loc><?php echo SITE_URL; ?></loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
-    <!-- Property Listings -->
     <?php
     try {
         $properties = $conn->query("SELECT * FROM properties ORDER BY created_at DESC");
@@ -34,7 +32,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     }
     ?>
 
-    <!-- Categories -->
     <?php
     try {
         $categories = $conn->query("SELECT * FROM categories");
@@ -52,7 +49,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     }
     ?>
 
-    <!-- Static Pages -->
     <url>
         <loc><?php echo SITE_URL; ?>/about.php</loc>
         <changefreq>monthly</changefreq>

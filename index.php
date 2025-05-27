@@ -29,7 +29,6 @@ try {
     <meta name="author" content="Real Estate Listings">
     <link rel="canonical" href="<?php echo SITE_URL; ?>" />
     
-    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Real Estate Listings - Find Your Dream Home">
     <meta property="og:description" content="Search and find your perfect property from our extensive listings. Browse houses, apartments, and villas in prime locations.">
     <meta property="og:type" content="website">
@@ -37,18 +36,15 @@ try {
     <meta property="og:image" content="<?php echo SITE_URL; ?>/assets/images/og-image.jpg">
     <meta property="og:site_name" content="Real Estate Listings">
     
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Real Estate Listings - Find Your Dream Home">
     <meta name="twitter:description" content="Search and find your perfect property from our extensive listings. Browse houses, apartments, and villas in prime locations.">
     <meta name="twitter:image" content="<?php echo SITE_URL; ?>/assets/images/og-image.jpg">
     
-    <!-- Preconnect to external domains -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     
-    <!-- Stylesheets with proper attributes -->
     <link rel="stylesheet" href="assets/css/variables.css" as="style">
     <link rel="stylesheet" href="assets/css/main.css" as="style">
     <link rel="stylesheet" href="assets/css/home.css" as="style">
@@ -56,7 +52,6 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -83,7 +78,6 @@ try {
     }
     </script>
 
-    <!-- Property Listings Structured Data -->
     <?php if (!empty($featured_properties)): ?>
     <script type="application/ld+json">
     {
