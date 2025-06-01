@@ -15,7 +15,6 @@
                 <a href="#" data-tab="buy">Buy</a>
                 <a href="#" data-tab="rent">Rent</a>
                 <a href="#" data-tab="sold">Sold</a>
-                <!-- <a href="/properties.php">New Homes</a> -->
             </div>
         </nav>
     </div>

@@ -131,16 +131,8 @@ Build upon existing database structure:
 - Integrate with homepage search
 - Maintain mobile responsiveness
 
-### 3. New Homes Section (To Implement)
-Extend properties system with:
-- Dedicated new homes page
-- Special filters:
-  - Development stages
-  - Builder information
-  - Completion dates
-- Integration with main search
 
-### 4. Categories & Filtering (To Implement)
+### 3. Categories & Filtering (To Implement)
 Extend current category system:
 - Category detail pages
 - Property listing by category
@@ -245,10 +237,6 @@ function get_properties_by_category($category_id) {
 - Category pages → Property listings
 - Property listings → Property details
 
-### 3. New Homes Integration
-- Main navigation → New homes section
-- Search filters → New homes results
-- Featured properties → New developments
 
 ## Getting Started
 1. Review existing code in index.php
