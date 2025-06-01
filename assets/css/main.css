@@ -444,6 +444,7 @@ section {
     width: 100%;
 }
 
+
 .margin-top-lg { margin-top: var(--spacing-lg); }
 .margin-bottom-lg { margin-bottom: var(--spacing-lg); }
 .padding-top-lg { padding-top: var(--spacing-lg); }
@@ -577,6 +578,7 @@ section {
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);        
         transition: all 0.2s ease;    
     }    
+    
     
     .filters-button i {        
         color: #495057;    
